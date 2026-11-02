@@ -1,0 +1,40 @@
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>        
+        <h3>Peliculas Recientes</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slideshow-backdrop [Peliculas]="peliculasRecientes"></app-slideshow-backdrop>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>        
+        <h3>Cartelera</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slideshow-poster [Peliculas]="peliculasRecientes"></app-slideshow-poster>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>        
+        <h3>Populares</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slideshow-pares [Peliculas]="populares" (cargarMas)="cargarMas()"></app-slideshow-pares>
+
+  <!-- <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let pelicula of peliculasRecientes">
+      <ion-card>
+        <img [src]="pelicula.backdrop_path | imagen"/>
+      </ion-card>
+    </ion-slide>
+  </ion-slides> -->
+</ion-content>
